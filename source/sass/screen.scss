@@ -12,22 +12,20 @@ http://www.MrPaulPhan.com/
 //    $LIBRARIES
 //  Global
 
-
-@import "spacing";
-
-
+@import "02-tools/config-fonts";
+@import "02-tools/config-breakpoints";
 
 
 
 
 
 
-@import "tools/config-color";
-@import "tools/config-fonts";
-@import "tools/config-breakpoints";
 
 
 
 
 
-@import "tools/tools";
+
+
+
+@import "02-tools/tools";

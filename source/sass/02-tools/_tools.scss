@@ -1,5 +1,4 @@
 // These styles will take priority
-
 .align-center {
     text-align: center;
 }
@@ -42,25 +41,24 @@
 
 .hide-small {
     display: none;
-        @media screen and (min-width: 768px) {
-    display: block;
+    @media screen and (min-width: 768px) {
+        display: block;
     }
 }
 
 .hide-large {
     display: block;
-        @media screen and (min-width: 768px) {
-    display: none;
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }
 
 .hide-small-to-medium {
     display: none;
-        @media screen and (min-width: 1024px) {
-    display: block;
+    @media screen and (min-width: 1024px) {
+        display: block;
     }
 }
-
 
 .trigger {
     cursor: pointer;
@@ -70,11 +68,9 @@
     display: none;
 }
 
-
- 
 // Background-Extend just add background-color
 .column-extend-full {
-      position: relative;
+    position: relative;
     &:before {
         content: "";
         position: absolute;
@@ -83,14 +79,14 @@
         display: block;
         left: -10%;
         z-index: -1;
+    }
 }
-
 
 // Show/Hide
 [class^="show-at"] {
     display: none;
 }
-
+/*
 .show-at-small {
     display: block;
     @include breakpoint($q-large) {
@@ -103,6 +99,7 @@
         display: block;
     }
     .show-at-large-inline {
-      display: inline;
+        display: inline;
     }
 }
+ */
