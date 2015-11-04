@@ -1,0 +1,39 @@
+.nav-icon {
+    display: block;
+    margin-top: 5px;
+}
+
+
+.nav {
+    width: 150%;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: $white;
+    border-radius: 1px;
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+}
+
+.nav-block {
+    display: inline;
+    padding: 13px 30px;
+    color: $greyMedium;
+    &:hover {
+        color: $gold;
+    }
+    &:first-of-type {
+        padding-left: 0;
+    }
+    &:last-of-type {
+        padding-right: 0;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+}

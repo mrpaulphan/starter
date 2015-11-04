@@ -1,0 +1,37 @@
+.roster-table {
+    width: 100%;
+}
+
+.roster-heading {
+    text-transform: uppercase;
+}
+
+.roster-row {
+    &:nth-child(odd) {
+        background-color: $white;
+    }
+}
+
+.roster-image {
+    height: 50px;
+    padding: 5px 0;
+}
+
+.roster-heading {
+    background-color: $blue;
+    color: $white;
+    height: 40px;
+    line-height: 40px;
+}
+
+.roster-icon-down {
+    transform: rotate(90deg);
+}
+
+.roster-more {
+    display: none;
+}
+
+.roster-header {
+    background-color: $blue;
+}

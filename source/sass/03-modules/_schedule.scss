@@ -1,0 +1,66 @@
+.module {
+    &-header {
+        padding: 10px 0;
+        display: inline-block;
+        width: 100%;
+        &_title {
+            float: left;
+            color: $blue;
+            font-family: $fontBold;
+        }
+    }
+    &_link {
+        padding: 10px 0;
+        a {
+            color: $greyMedium;
+            font-size: 10px;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+        }
+    }
+}
+
+.schedule {
+    &-vs {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        clear: both;
+    }
+    &_team-name {
+        font-size: 10px;
+    }
+    &-away-team {
+        float: left;
+        width: 33.3%;
+        img {
+            box-sizing: border-box;
+            padding: 10px;
+            width: 100%;
+        }
+    }
+    &-home-team {
+        float: right;
+        width: 33.3%;
+        img {
+            box-sizing: border-box;
+            padding: 10px;
+            width: 100%;
+        }
+    }
+    &-vs-team {
+        box-sizing: border-box;
+        width: 33.3%;
+        float: left;
+        text-align: center;
+        &_day {
+            color: $greyMedium;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
+
+
