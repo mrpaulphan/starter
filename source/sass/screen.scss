@@ -14,6 +14,13 @@ http://www.MrPaulPhan.com/
 
 @import "02-tools/config-fonts";
 @import "02-tools/config-breakpoints";
+@import "02-tools/config-colors";
+@import "02-tools/config-layouts";
+
+
+
+// Base
+@import "03-base/fonts";
 
 
 
@@ -23,9 +30,15 @@ http://www.MrPaulPhan.com/
 
 
 
+// Modules
 
 
 
 
 
+
+
+
+
+// Priority
 @import "02-tools/tools";

@@ -120,11 +120,11 @@ module.exports = function(grunt) {
         // Grunt watch
         watch: {
             styles: {
-                files: ['source/styles/**/*.scss'],
+                files: ['source/sass/**/*.scss'],
                 tasks: ['sass:dev']
             },
             scripts: {
-                files: ['source/scripts/**/*.js'],
+                files: ['source/js/**/*.js'],
                 tasks: ['uglify:dev']
             },
             images: {
@@ -135,7 +135,7 @@ module.exports = function(grunt) {
     });
 
     // Task configuration
-    grunt.registerTask('default', ['sass:dev', 'imagemin:all', 'uglify:dev', 'autoprefixer:dev', 'watch']);
+    grunt.registerTask('default', ['sass:dev','copy', 'imagemin:all', 'uglify:dev', 'autoprefixer:dev', 'watch']);
     grunt.registerTask('sync', ['shell:sync']);
 
 

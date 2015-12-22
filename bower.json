@@ -11,12 +11,13 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "normalize-scss": "normalize.scss#~3.0.3"
+    "normalize-scss": "normalize.scss#~3.0.3",
+    "breakpoint-sass": "~2.5.0",
+    "neat": "~1.7.0",
+    "bourbon": "~4.0.2"
   }
 }
