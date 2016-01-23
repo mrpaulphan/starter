@@ -9,34 +9,18 @@ http://www.MrPaulPhan.com/
 *************************************************
 */
 
-//    $LIBRARIES
-//  Global
+// Libraries
+@import "01-libraries/reset";
 
-@import "02-tools/config-fonts";
+// Config
+@import "02-tools/config-varibles";
 @import "02-tools/config-breakpoints";
-@import "02-tools/config-colors";
-@import "02-tools/config-layouts";
-
 
 
 // Base
 @import "03-base/fonts";
 
-
-
-
-
-
-
-
-
 // Modules
-
-
-
-
-
-
 
 
 

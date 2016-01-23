@@ -1,90 +1,12 @@
-// Container
 .page {
-    //padding-left: rem(page(mobile)/2);
-    //padding-right: rem(page(mobile)/2);
-    overflow: hidden;
-    // effects every element that follows the container
-    & > * {
-        max-width: $max-width;
-        margin-left: auto;
-        margin-right: auto;
-        box-sizing: border-box;
-    }
-}
-
-
-/*--cleafix hack -- */
-
-.section:before,
-.section:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* layout */
-
-.col-1 {
-    width: percentage(1/12)
-}
-
-.col-2 {
-    width: percentage(2/12)
-}
-
-.col-3 {
-    width: percentage(3/12)
-}
-
-.col-4 {
-    width: percentage(4/12)
-}
-
-.col-5 {
-    width: percentage(5/12)
-}
-
-.col-6 {
-    width: percentage(6/12)
-}
-
-.col-7 {
-    width: percentage(7/12)
-}
-
-.col-8 {
-    width: percentage(8/12)
-}
-
-.col-9 {
-    width: percentage(9/12)
-}
-
-.col-10 {
-    width: percentage(10/12)
-}
-
-.col-11 {
-    width: percentage(11/12)
-}
-
-.col-12 {
-    width: percentage(12/12)
-}
-
-[class*='col-'] {
-    float: left;
-    background-color: #ccc;
-    padding-right: $gutter;
-    padding-left: $gutter;
-    box-sizing: border-box;
-}
-
-[class*='col-'] > p {
-    background-color: #FFC2C2;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    color: white;
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  box-sizing: border-box;
+  overflow: hidden;
+  @include media('>=large') {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }

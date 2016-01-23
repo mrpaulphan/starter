@@ -4,62 +4,6 @@ body {
     color: #000;
 }
 
-h1 {
-    font-size: 26px;
-    font-family: $fontBold;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
-h2,
-.heading-2 {
-    font-size: 14px;
-    font-family: $fontBold;
-    text-transform: uppercase;
-}
-
-h3,
-.heading-3 {
-    font-size: 12px;
-    font-family: $fontBold;
-    text-transform: uppercase;
-}
-
-h4,
-.heading-4 {
-    font-size: 30px;
-    font-family: $fontLight;
-}
-
-p {
-    font-size: 16px;
-    line-height: 28px;
-}
-
-.meta {
-    font-size: 11px;
-}
-
-.headline {
-    font-size: 15px;
-    color: #333;
-}
-
-.title {
-    color: #333;
-    text-shadow: 0 1px 0 #fff;
-    font-family: $fontMedium;
-}
-
-.tag {
-    font-family: $fontMedium;
-    text-transform: uppercase;
-}
-
-.bold {
-    font-family: $fontBold;
-}
-
 .longform {
     margin-top: 20px;
     padding-bottom: 20px;
