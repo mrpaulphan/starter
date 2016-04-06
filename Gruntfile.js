@@ -19,10 +19,15 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
-          outputStyle: 'expanded'
+          outputStyle: 'nested',
+          imagePath: 'assets/images',
+          precision: 5,
+          includePaths: [
+            'components'
+          ]
         },
         files: {
-          'public/source/css/screen.css': 'source/sass/screen.scss'
+          'public/assets/css/screen.css': 'assets/sass/screen.scss'
         }
       }
     },
@@ -32,9 +37,9 @@ module.exports = function(grunt) {
       all: {
         files: [{
           expand: true,
-          cwd: 'source/images',
+          cwd: 'assets/images',
           src: ['**/*.{png,jpg,gif}'],
-          dest: 'public/source/images/'
+          dest: 'public/assets/images/'
         }]
       }
     },
@@ -48,12 +53,12 @@ module.exports = function(grunt) {
           compress: false
         },
         files: {
-          'public/source/js/script.min.js': [
+          'public/assets/js/script.min.js': [
             // Include:
-            'source/js/01-libraries/*.js',
-            'source/js/02-plugins/*.js',
-            'source/js/03-modules/*.js',
-            'source/js/script.js',
+            'assets/js/01-libraries/*.js',
+            'assets/js/02-plugins/*.js',
+            'assets/js/03-modules/*.js',
+            'assets/js/script.js',
           ]
         }
       }
@@ -64,9 +69,9 @@ module.exports = function(grunt) {
           // includes files within path
           {
             expand: true,
-            cwd: 'source/fonts/',
+            cwd: 'assets/fonts/',
             src: ['**'],
-            dest: 'public/source/fonts'
+            dest: 'public/assets/fonts'
           },
         ],
       },
@@ -77,7 +82,7 @@ module.exports = function(grunt) {
         browsers: ['last 2 version', 'ie 8', 'ie 9']
       },
       dev: {
-        src: 'public/source/**/*.css'
+        src: 'public/assets/**/*.css'
       },
     },
     px_to_rem: {
@@ -107,7 +112,7 @@ module.exports = function(grunt) {
       },
       dist: {
         expand: true,
-        cwd: 'source/svg/',
+        cwd: 'assets/svg/',
         src: ['**/*.svg'],
         dest: 'tmp/svg/'
           //ext: '.colors-pale-dark-greyDark-gold-blue-facebookBg-googleplusBg-twitterBg.svg'
@@ -126,27 +131,27 @@ module.exports = function(grunt) {
         command: 'ssh drexelba@drexelbaseball.com "mysqldump -pu5PTqUUZwvGl -u drexelba_user  drexelba_db" |  /Applications/MAMP/Library/bin/mysql -u root -proot drexelbaseball_cms '
       },
       uploadsync: {
-        command: 'rsync -avz /home2/drexelba/public/DrexelBaseball-CMS/public/source/uploads public/temp/source/uploads'
+        command: 'rsync -avz /home2/drexelba/public/DrexelBaseball-CMS/public/assets/uploads public/temp/assets/uploads'
       },
       cleanup: {
         command: 'rm -r tmp'
       },
       prepareCleanUp: {
-        command: 'rm -r public/source/images/svg/'
+        command: 'rm -r public/assets/images/svg/'
       }
     },
     // Grunt watch
     watch: {
       styles: {
-        files: ['source/sass/**/*.scss'],
+        files: ['assets/sass/**/*.scss'],
         tasks: ['sass:dev', 'autoprefixer:dev']
       },
       scripts: {
-        files: ['source/js/**/*.js'],
+        files: ['assets/js/**/*.js'],
         tasks: ['uglify:dev']
       },
       images: {
-        files: ['source/images'],
+        files: ['assets/images'],
         tasks: ['imagemin:all']
       }
     }

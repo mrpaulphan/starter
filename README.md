@@ -1,5 +1,5 @@
 # Starter
-Starter File For All Projects
+Basic font-end starter file for all projects
 
 ## Bower
 Run `npm install`
