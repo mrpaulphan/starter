@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    $FLEXBOX
+\*------------------------------------*/
+.flex {
+    display: flex;
+    align-items: flex-start;
+}
+.flex--align-center {
+    align-items: center;
+}
+.flex--space-between {
+    justify-content: space-between;
+}
+.flex--justify-center {
+    justify-content: center;
+}
+.flex--align-self--stretch {
+    align-self: stretch;
+}
+.flex--align-items--stretch {
+    align-items: stretch;
+}
+.flex--wrap {
+    flex-wrap: wrap;
+}
+.flex--direction--column {
+    flex-direction: column;
+}

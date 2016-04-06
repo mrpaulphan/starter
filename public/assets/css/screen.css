@@ -12,88 +12,82 @@ http://www.MrPaulPhan.com/
 /* Border */
 /* Size */
 /* Fonts */
-.align-center {
-  text-align: center; }
+/*------------------------------------*    $HANDY TOOLS
+\*------------------------------------*/
+/**
+ * Clearfix
+ */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
 
-.align-left {
-  text-align: left; }
+.cursor--pointer {
+  cursor: pointer; }
 
-.align-right {
-  text-align: right; }
+.text-transfom--uppercase {
+  text-transform: uppercase; }
 
-.left {
-  float: left; }
+.position--relative {
+  position: relative; }
 
-.right {
+.float--right {
   float: right; }
 
-.center {
-  margin: 0 auto; }
+.float--left {
+  float: left; }
 
-.relative {
-  position: relative; }
+.clear--both {
+  clear: both; }
 
-.toggle {
-  cursor: pointer; }
+.vertical-align--middle {
+  vertical-align: middle; }
 
-.transition {
-  transition: all 100ms ease-in-out; }
+.vertical-align--bottom {
+  vertical-align: bottom; }
 
-.bottom-border {
-  border-bottom: 1px solid #e2e2e2; }
+.overflow--hidden {
+  overflow: hidden; }
 
-.hide-small {
-  display: none; }
-  @media screen and (min-width: 768px) {
-    .hide-small {
-      display: block; } }
+.overflow-y--hidden {
+  overflow-y: hidden; }
 
-.hide-large {
-  display: block; }
-  @media screen and (min-width: 768px) {
-    .hide-large {
-      display: none; } }
+.text-align--center {
+  text-align: center; }
 
-.hide-small-to-medium {
-  display: none; }
-  @media screen and (min-width: 1024px) {
-    .hide-small-to-medium {
-      display: block; } }
+.text-align--left {
+  text-align: left; }
 
-.trigger {
-  cursor: pointer; }
+.text-align--right {
+  text-align: right; }
 
-.hide {
-  display: none; }
+.display--inline-block {
+  display: inline-block; }
 
-.column-extend-full {
-  position: relative; }
-  .column-extend-full:before {
-    content: "";
-    position: absolute;
-    width: 120%;
-    height: 100%;
-    display: block;
-    left: -10%;
-    z-index: -1; }
+.font-weight--normal {
+  font-weight: normal; }
 
-[class^="show-at"] {
-  display: none; }
+.text-decoration--underline {
+  text-decoration: underline; }
 
-/*
-.show-at-small {
-    display: block;
-    @include breakpoint($q-large) {
-        display: none;
-    }
-}
+.text-decoration--none {
+  text-decoration: none; }
 
-@include breakpoint($q-large) {
-    .show-at-large {
-        display: block;
-    }
-    .show-at-large-inline {
-        display: inline;
-    }
-}
- */
+.white-space--nowrap {
+  white-space: nowrap; }
+
+.width--full {
+  width: 100%; }
+
+.background--cover {
+  background-size: cover; }
+
+.background--center {
+  background-position: center center; }
+
+.center-block {
+  margin-left: auto;
+  margin-right: auto; }
+
+.round {
+  border-radius: 50%; }

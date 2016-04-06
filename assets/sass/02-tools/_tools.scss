@@ -1,105 +1,89 @@
-// These styles will take priority
-.align-center {
-    text-align: center;
+/*------------------------------------*\
+    $HANDY TOOLS
+\*------------------------------------*/
+
+// Powerful utility classes to be applied directly to the element. These
+// should be more powerful then default styled BEM helper classes and should
+// map specifically to CSS .property--value.
+
+/**
+ * Clearfix
+ */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-.align-left {
-    text-align: left;
+.cursor--pointer {
+    cursor: pointer;
 }
-
-.align-right {
-    text-align: right;
+.text-transfom--uppercase {
+    text-transform: uppercase;
 }
-
-.left {
-    float: left;
+.position--relative {
+    position: relative;
 }
-
-.right {
+.float--right {
     float: right;
 }
-
-.center {
-    margin: 0 auto;
+.float--left {
+    float: left;
+}
+.clear--both {
+    clear: both;
+}
+.vertical-align--middle {
+    vertical-align: middle;
+}
+.vertical-align--bottom {
+    vertical-align: bottom;
+}
+.overflow--hidden {
+    overflow: hidden;
+}
+.overflow-y--hidden {
+    overflow-y: hidden;
+}
+.text-align--center {
+    text-align: center;
+}
+.text-align--left {
+    text-align: left;
+}
+.text-align--right {
+    text-align: right;
+}
+.display--inline-block {
+    display: inline-block;
+}
+.font-weight--normal {
+    font-weight: normal;
+}
+.text-decoration--underline {
+    text-decoration: underline;
+}
+.text-decoration--none {
+    text-decoration: none;
+}
+.white-space--nowrap {
+    white-space: nowrap;
+}
+.width--full {
+    width: 100%;
+}
+.background--cover {
+    background-size: cover;
+}
+.background--center {
+    background-position: center center;
 }
 
-.relative {
-    position: relative;
+// Non-BEM syntax helper classes
+.center-block {
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.toggle {
-    cursor: pointer;
+.round {
+    border-radius: 50%;
 }
-
-.transition {
-    transition: all 100ms ease-in-out;
-}
-
-.bottom-border {
-    border-bottom: 1px solid #e2e2e2;
-}
-
-.hide-small {
-    display: none;
-    @media screen and (min-width: 768px) {
-        display: block;
-    }
-}
-
-.hide-large {
-    display: block;
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
-}
-
-.hide-small-to-medium {
-    display: none;
-    @media screen and (min-width: 1024px) {
-        display: block;
-    }
-}
-
-.trigger {
-    cursor: pointer;
-}
-
-.hide {
-    display: none;
-}
-
-// Background-Extend just add background-color
-.column-extend-full {
-    position: relative;
-    &:before {
-        content: "";
-        position: absolute;
-        width: 120%;
-        height: 100%;
-        display: block;
-        left: -10%;
-        z-index: -1;
-    }
-}
-
-// Show/Hide
-[class^="show-at"] {
-    display: none;
-}
-/*
-.show-at-small {
-    display: block;
-    @include breakpoint($q-large) {
-        display: none;
-    }
-}
-
-@include breakpoint($q-large) {
-    .show-at-large {
-        display: block;
-    }
-    .show-at-large-inline {
-        display: inline;
-    }
-}
- */

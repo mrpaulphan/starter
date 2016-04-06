@@ -23,7 +23,10 @@ module.exports = function(grunt) {
           imagePath: 'assets/images',
           precision: 5,
           includePaths: [
-            'components'
+            'components',
+            'components/bourbon/dist',
+            'components/include-media/dist'
+
           ]
         },
         files: {
@@ -55,6 +58,7 @@ module.exports = function(grunt) {
         files: {
           'public/assets/js/script.min.js': [
             // Include:
+            'components/jquery/dist/jquery.js',
             'assets/js/01-libraries/*.js',
             'assets/js/02-plugins/*.js',
             'assets/js/03-modules/*.js',
