@@ -7,6 +7,8 @@ $(document).ready(function() {
   //firebase();
   firebase.initializeApp(config);
   auth.login();
+  auth.register();
+  auth.resetPassword();
 
 });
 

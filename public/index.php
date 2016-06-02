@@ -14,6 +14,11 @@ $dashboardPath = '/dashboard.php';
 			<label for="loginPw">Password</label>
 			<input type="password" name="pw" id="loginPassword">
 			<br>
+			<input type="checkbox" name="name" value="" id="rememberMe">
+			<label for="rememberMe">Remember Me</label>
+			<br>
+			<a href="#" id="forgetPassword">Forget Password</label>
+			<br>
 			<input type="submit" name="name" value="Submit" id="loginSubmit">
 
 		</form>
@@ -32,7 +37,7 @@ $dashboardPath = '/dashboard.php';
 		<input type="password" name="pw" value="" id="registerPw">
 
 
-		<input type="submit" name="name" value="Submit" id="registerSubmit">
+		<input type="submit" name="name" value="Submit" id="submitRegister">
 	</form>
 	</section>
 
