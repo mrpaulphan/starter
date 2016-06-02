@@ -4,6 +4,9 @@
  	doc ready
 -------------------------------------------*/
 $(document).ready(function() {
+  //firebase();
+  firebase.initializeApp(config);
+  auth.login();
 
 });
 
