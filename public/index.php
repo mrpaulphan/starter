@@ -17,28 +17,31 @@ $dashboardPath = '/dashboard.php';
 			<input type="checkbox" name="name" value="" id="rememberMe">
 			<label for="rememberMe">Remember Me</label>
 			<br>
-			<a href="#" id="forgetPassword">Forget Password</label>
-			<br>
-			<input type="submit" name="name" value="Submit" id="loginSubmit">
+<!-- 			<a href="#" data-target="forgetPassword">Forget Password</label>
+ -->			<br>
+			<input type="submit" name="name" value="Submit" id="loginSubmitButton">
 
 		</form>
 		<h3>Don't have an account? <a class="toggle" href="#">Sign up</a></h3>
 <br>
-	<form id="register" class="auth__section-form auth__section-form--register" action="<?php echo $dashboardPath ?>" method="post">
+	<form id="registerForm" class="auth__section-form auth__section-form--register" action="<?php echo $dashboardPath ?>" method="post">
 		<h2 class="auth__section-title">Register</h2>
 		<label for="registerEmail">Email</label>
-		<input type="email" name="email" value="" id="registerEmail">
+		<input type="email" id="registerEmail">
 		<br>
 		<label for="registerUsername">Username</label>
-		<input type="text" name="pw" value="" id="registerUsername">
+		<input type="text" id="registerUsername">
 		<br>
 
 		<label for="registerEmail">Password</label>
-		<input type="password" name="pw" value="" id="registerPw">
+		<input type="password"  id="registerPassword">
 
 
-		<input type="submit" name="name" value="Submit" id="submitRegister">
+		<input type="submit" value="Submit" id="registerSubmit">
 	</form>
+	<br>
+
+<span class="signout" style="display:none;">Signout</span>
 	</section>
 
 

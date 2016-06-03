@@ -1,55 +1,86 @@
 var auth = (function() {
-  // Variables
-  var loginSubmitButton = $('#loginSubmit'),
-    registerSubmitButton = $('#submitRegister'),
+  var loginSubmitButton = $('#loginSubmitButton'),
+    registerSubmitButton = $('#registerSubmit'),
     forgetPasswordButton = $('#forgetPassword'),
-    emailInput = $('#loginEmail'),
-    passwordInput = $('#loginPassword'),
-    loginForm = $('#loginForm');
+    loginEmailInput = $('#loginEmail'),
+    loginPasswordInput = $('#loginPassword'),
+    registerEmailInput = $('#registerEmail'),
+    registerPasswordInput = $('#registerPassword'),
+    loginForm = $('#loginForm'),
+    registerForm = $('#registerForm'),
+    registerUsername = $('#registerUsername'),
+    currentURL = $(location).attr('href');
   return {
+    init: function() {
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          console.log('User is logged in');
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var refreshToken = user.refreshToken;
+          var providerData = user.providerData;
+
+          if (currentURL == constant.main) {
+            window.location.replace(constant.dashboard);
+
+          }
+          if (currentURL == constant.dashboard) {
+            db.account(user);
+          }
+
+        } else {
+          console.log('No User');
+
+          if (currentURL == constant.dashboard) {
+            alert('you need to be logged in')
+            window.location.replace(constant.main);
+          }
+
+
+
+        }
+
+      });
+    },
     /*
     The login function will read the data from the input fields
     and check it with the firebase DB.
     */
     login: function() {
       loginSubmitButton.click(function(e) {
-        var email = emailInput.val(),
-          password = passwordInput.val();
+        e.preventDefault();
+        var email = loginEmailInput.val();
+        var password = loginPasswordInput.val();
 
-        // Firebase Authentication
+
+        // Firebase Authentication - Login
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-          e.preventDefault();
           var errorCode = error.code;
           var errorMessage = error.message;
-          // Check for errors
-          if (error) {
-            console.log('Login Form Error');
-
-            // Go through error code
-            switch (errorCode) {
-              case 'auth/invalid-email':
-                console.log('Thrown if the email address is not valid.');
-                break;
-              case 'auth/user-disabled':
-                console.log('Thrown if the user corresponding to the given email has been disabled.');
-                break;
-              case 'auth/user-not-found':
-                console.log('Thrown if there is no user corresponding to the given email.');
-                break;
-              case 'auth/wrong-password':
-                console.log('Thrown if the password is invalid for the given email, or the account corresponding to the email does not have a password set.');
-                break;
-              default:
-                console.log('Error');
-            }
-
-          } else {
-            // Submit form
-            console.log('Login successfull');
-            loginForm.submit();
-
+          // Go through error code
+          switch (errorCode) {
+            case 'auth/invalid-email':
+              console.log('Thrown if the email address is not valid.');
+              break;
+            case 'auth/user-disabled':
+              console.log('Thrown if the user corresponding to the given email has been disabled.');
+              break;
+            case 'auth/user-not-found':
+              console.log('Thrown if there is no user corresponding to the given email.');
+              break;
+            case 'auth/wrong-password':
+              console.log('Thrown if the password is invalid for the given email, or the account corresponding to the email does not have a password set.');
+              break;
           }
-        });
+
+
+        })
+
+
 
       });
 
@@ -59,12 +90,14 @@ var auth = (function() {
     */
     register: function() {
       registerSubmitButton.click(function(e) {
-        var email = emailInput.val(),
-          password = passwordInput.val();
+        e.preventDefault();
 
-        // Firebase Authentication
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-          e.preventDefault();
+        var email = registerEmailInput.val(),
+          password = registerPasswordInput.val();
+
+
+        // Firebase Authentication - Register
+        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
           var errorCode = error.code;
           var errorMessage = error.message;
 
@@ -91,8 +124,11 @@ var auth = (function() {
 
           } else {
             // Submit form
-            console.log('Login successfull');
-            loginForm.submit();
+            console.log('Register successfull');
+
+
+
+            //  registerForm.submit();
 
           }
         });
@@ -136,7 +172,7 @@ var auth = (function() {
           } else {
             // Submit form
             console.log('Login successfull');
-          //  loginForm.submit();
+            //  loginForm.submit();
 
           }
         });

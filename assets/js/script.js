@@ -6,9 +6,12 @@
 $(document).ready(function() {
   //firebase();
   firebase.initializeApp(config);
+  auth.init(constant);
   auth.login();
   auth.register();
   auth.resetPassword();
+  db.query();
+  toggle();
 
 });
 

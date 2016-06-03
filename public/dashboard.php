@@ -28,8 +28,14 @@ $path = '/index.php';
     </form>
 
   </div>
-    <canvas id="radarChart" width="640" height="400"></canvas>
-   <canvas id="doughnutChart" width="640" height="400"></canvas>
+
+</section>
+
+<section>
+  User Profile
+  <div class="profile">
+
+  </div>
 </section>
 
 <?php include 'partials/footer.php' ;?>
