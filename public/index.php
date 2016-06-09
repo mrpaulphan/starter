@@ -6,8 +6,6 @@
 		<link rel="stylesheet" href="/assets/style.css" media="screen" title="no title" charset="utf-8">
 	</head>
 	<body>
-	<script type="text/javascript" src="/assets/js/script.min.js">
 
-	</script>
 	</body>
 </html>
