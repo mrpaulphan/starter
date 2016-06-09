@@ -23,10 +23,7 @@ module.exports = function(grunt) {
           imagePath: 'assets/images',
           precision: 5,
           includePaths: [
-            'components',
-            'components/bourbon/dist',
-            'components/include-media/dist'
-
+            'components'
           ]
         },
         files: {
