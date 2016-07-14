@@ -9,7 +9,7 @@ Thumbs.db
 .sass-cache/
 
 # Compiled Site
-#/components
+/components
 /vendor
 /node_modules
 
